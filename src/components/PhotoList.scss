@@ -1,0 +1,21 @@
+@import '../variables';
+  /* section */
+  main{
+    section {
+        width: 93vw;
+        margin: 0 auto;
+     }
+    .gallery {
+        padding: 3rem 0;
+    }
+    .gallery-images {
+        width: 93vw;
+        margin: 0 auto;
+        display: grid;
+        gap: 3rem;
+      }
+   }
+   p.error {
+       text-align: center;
+       font-size: 2rem;
+    }

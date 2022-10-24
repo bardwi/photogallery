@@ -24,5 +24,5 @@ npm start
 ### To run the Test
 
 ```
-npm test a
+npm run test
 ```

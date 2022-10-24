@@ -1,0 +1,24 @@
+@import '../variables';
+
+.btn-favourite {
+    background-color: $color-text-white;
+    color: $color-text-black;
+    border: 1px solid $color-text-white;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 30px;
+    mix-blend-mode: screen;
+  }
+  
+  .btn-not-favourite {
+    background-color: transparent;
+    color: $color-text-white;
+    border: 1px solid $color-text-white;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 30px;
+  }

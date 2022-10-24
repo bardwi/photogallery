@@ -1,0 +1,99 @@
+ /* gallery photos */
+ @import '../variables';
+  
+article.images {
+    height: 17.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 0 0 #b1b1b1;
+    border-radius: 5px;
+    > img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+      h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 800;
+      }
+      .content-overlay {
+        background: rgba($color-text-black,0.6);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+      }
+      .favorite {
+        position: absolute;
+        top: 0;
+        padding: 0.6rem;
+      
+      }
+      .favorite p {
+        font-style: normal;
+        margin-bottom: 0;
+      }
+  }
+
+  .images:hover .content-overlay {
+    opacity: 1;
+  }
+  
+  .images:hover .gallery-details {
+    top: 70%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  article> div.gallery-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 70%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    color: $color-text-white;
+    .title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-transform: capitalize;
+      }
+      .ownername {
+        font-style: italic;
+        text-transform: capitalize;
+        line-height: 1;
+      }
+      
+      .bottom-border {
+        display: block;
+        width: 80px;
+        height: 2px;
+        background: $color-text-white;
+        margin: 0.5rem auto;
+      }  
+  }
+
+  
+  
+ 
+  
+  

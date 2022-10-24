@@ -1,0 +1,14 @@
+{
+    "apiUrl":"https://flickr.com/services/rest/",
+    "param": {
+        "api_key":"806ec1fa670509aee7a893afa9fa3b2b",
+        "method":"flickr.photos.search",
+        "per_page":"21",
+        "format":"json",
+        "sort":"relevance",
+        "extras":"owner_name",
+        "nojsoncallback":"1",
+        "tags":"nature"
+   },
+   "imageUrl": "https://live.staticflickr.com/"
+}
