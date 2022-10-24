@@ -9,8 +9,7 @@ const Photos = (props)=> {
         const addFavorite =(fav)=> {
         const isFavorite = favorites.includes(fav);
         return isFavorite ? setFavorites((prev)=> prev.filter((item)=> item!==fav)):
-        setFavorites((prev)=>[...prev, fav]);
-        ;     
+        setFavorites((prev)=>[...prev, fav]);    
       }
 
     return(
@@ -19,37 +18,33 @@ const Photos = (props)=> {
         <>
         {props.photos.map((photo, index)=> {
             const isFavorite = favorites.includes(photo.id);
-                return (
-                   <article className="images" key={index}>
-                      <div className="content-overlay"></div>
-                      
-                      <img src={photo.url} alt={photo.id}/>
-                      {isFavorite &&(
-                        <div className="favorite">
-                          <p>&#11088;</p>
-                        </div>
-                      )}
-                      <div className="gallery-details">
-                        <div>
-                          <h4 className="title">{photo.title}</h4>
-                          <div className="bottom-border"></div>
-                          <p className="ownername">{photo.ownername}</p>
-                          <Button 
-                            addFavorites={addFavorite} 
-                            isFavorite={isFavorite} id={photo.id}
-                          />
-                        </div>
-                      </div>
-                   </article>
-                )
-               })}
-            </>
-            )}
+            return (
+              <article className="images" key={index}>
+                <div className="content-overlay"></div>
+                  <img src={photo.url} alt={photo.id}/>
+                  {isFavorite &&(
+                    <div className="favorite">
+                      <p>&#11088;</p>
+                    </div>
+                  )}
+                <div className="gallery-details">
+                  <div>
+                    <h4 className="title">{photo.title}</h4>
+                    <div className="bottom-border"></div>
+                    <p className="ownername">{photo.ownername}</p>
+                    <Button 
+                    addFavorites={addFavorite} 
+                    isFavorite={isFavorite} id={photo.id}
+                    />
+                  </div>
+                </div>
+              </article>
+              )
+              })}
         </>
-        
-    )
-
-}
+        )}
+        </>)
+      }
 
 
 export default Photos;

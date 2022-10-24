@@ -16,7 +16,6 @@ function PhotoList() {
     const initialPageLoaded = useRef(false);
     const [errorText, setErrorText] = useState('');
    
-
     const fetchGallery = async() => {
       queryString.set('page',page)
       setLoading(true);
@@ -42,8 +41,7 @@ function PhotoList() {
         console.log(error)
         setErrorText("There is an error fetching!")
       }
-   
-  }
+    }
 
   function fetchMorePhotos() {
     if(!initialPageLoaded.current) {
@@ -56,10 +54,8 @@ function PhotoList() {
     useEffect(()=> {
       fetchGallery()
     },[page])
-
-    
-     
-   return (
+ 
+  return (
     <>
      {errorText && (
        <p className="error"> {errorText} </p>
