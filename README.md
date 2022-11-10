@@ -1,8 +1,6 @@
-# Web Assignment - Vinted 
+#Photo gallery
 
-### Key Points
-- Flickr API Integration
-- Design should be recreated as closely as possible, including item hover state.
+- Flickr Image API Integration
 - Responsive design
 - Infinite scroll - it's a concept where additional data is loaded when user scrolls down the screen.
 - Favourite an item (favourites should not be lost on page reload).
